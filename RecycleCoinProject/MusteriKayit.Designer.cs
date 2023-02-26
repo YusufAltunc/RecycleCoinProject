@@ -122,7 +122,7 @@
             // lblmusteritoplam
             // 
             this.lblmusteritoplam.AutoSize = true;
-            this.lblmusteritoplam.Location = new System.Drawing.Point(41, 331);
+            this.lblmusteritoplam.Location = new System.Drawing.Point(10, 347);
             this.lblmusteritoplam.Name = "lblmusteritoplam";
             this.lblmusteritoplam.Size = new System.Drawing.Size(142, 28);
             this.lblmusteritoplam.TabIndex = 32;
@@ -132,7 +132,7 @@
             // lblOncekiSha
             // 
             this.lblOncekiSha.AutoSize = true;
-            this.lblOncekiSha.Location = new System.Drawing.Point(39, 359);
+            this.lblOncekiSha.Location = new System.Drawing.Point(8, 375);
             this.lblOncekiSha.Name = "lblOncekiSha";
             this.lblOncekiSha.Size = new System.Drawing.Size(144, 28);
             this.lblOncekiSha.TabIndex = 33;
@@ -142,7 +142,7 @@
             // lblsha
             // 
             this.lblsha.AutoSize = true;
-            this.lblsha.Location = new System.Drawing.Point(52, 410);
+            this.lblsha.Location = new System.Drawing.Point(28, 422);
             this.lblsha.Name = "lblsha";
             this.lblsha.Size = new System.Drawing.Size(62, 28);
             this.lblsha.TabIndex = 35;

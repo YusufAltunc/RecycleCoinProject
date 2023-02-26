@@ -114,9 +114,9 @@
             this.lblcoindegisim.AutoSize = true;
             this.lblcoindegisim.Location = new System.Drawing.Point(85, 234);
             this.lblcoindegisim.Name = "lblcoindegisim";
-            this.lblcoindegisim.Size = new System.Drawing.Size(68, 28);
+            this.lblcoindegisim.Size = new System.Drawing.Size(24, 28);
             this.lblcoindegisim.TabIndex = 30;
-            this.lblcoindegisim.Text = "label4";
+            this.lblcoindegisim.Text = "0";
             // 
             // label3
             // 
@@ -162,9 +162,9 @@
             this.lblcarbondegisim.AutoSize = true;
             this.lblcarbondegisim.Location = new System.Drawing.Point(254, 234);
             this.lblcarbondegisim.Name = "lblcarbondegisim";
-            this.lblcarbondegisim.Size = new System.Drawing.Size(68, 28);
+            this.lblcarbondegisim.Size = new System.Drawing.Size(24, 28);
             this.lblcarbondegisim.TabIndex = 36;
-            this.lblcarbondegisim.Text = "label4";
+            this.lblcarbondegisim.Text = "0";
             // 
             // button3
             // 

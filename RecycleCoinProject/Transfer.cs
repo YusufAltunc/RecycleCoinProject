@@ -29,7 +29,7 @@ namespace RecycleCoinProject
             this.musteriTblTableAdapter.Fill(this.recycleCoinDataSet1.MusteriTbl);
             lblTC.Text = TcNo;
 
-            SqlCommand komut = new SqlCommand("Select CarbonDegeri,SHA256 From MusteriTbl where TC=@p1", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("Select CoinDegeri,SHA256 From MusteriTbl where TC=@p1", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", lblTC.Text);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -52,21 +52,21 @@ namespace RecycleCoinProject
             fr.Show();
             this.Hide();
         }
-        public int carbondegerin;
-        public int transfermiktari;
+        public decimal coindegeri;
+        public decimal transfermiktari;
         public decimal alicideger;
         private void button2_Click(object sender, EventArgs e)
         {
-            carbondegerin = Convert.ToInt32(lblCarbon.Text);
-            transfermiktari = Convert.ToInt32(textBox1.Text);
-            if(carbondegerin > transfermiktari || carbondegerin == transfermiktari)
+            coindegeri = Convert.ToDecimal(lblCarbon.Text);
+            transfermiktari = Convert.ToDecimal(textBox1.Text);
+            if(coindegeri > transfermiktari || coindegeri == transfermiktari)
             {
                 //işlem devam et
                 if(lblaliciadres.Text != lblgondericiadres.Text)
                 {
-                    lblgndrcyeni.Text = Convert.ToString(carbondegerin - transfermiktari);
+                    lblgndrcyeni.Text = Convert.ToString(coindegeri - transfermiktari);
                     //goster
-                    SqlCommand komut = new SqlCommand("Select CarbonDegeri From MusteriTbl where SHA256=@p1", bgl.baglanti());
+                    SqlCommand komut = new SqlCommand("Select CoinDegeri From MusteriTbl where SHA256=@p1", bgl.baglanti());
                     komut.Parameters.AddWithValue("@p1", lblaliciadres.Text);
                     SqlDataReader dr = komut.ExecuteReader();
                     while (dr.Read())
@@ -76,21 +76,21 @@ namespace RecycleCoinProject
                     alicideger = Convert.ToDecimal(lblaliciyeni.Text) + transfermiktari;
 
                     //guncelle
-                    SqlCommand komut3 = new SqlCommand("Update MusteriTbl set CarbonDegeri=@p2 where SHA256=@p1", bgl.baglanti());
+                    SqlCommand komut3 = new SqlCommand("Update MusteriTbl set CoinDegeri=@p2 where SHA256=@p1", bgl.baglanti());
                     komut3.Parameters.AddWithValue("@p1", lblaliciadres.Text);
                     komut3.Parameters.AddWithValue("@p2", alicideger);
                     komut3.ExecuteNonQuery();
-                    SqlCommand komut4 = new SqlCommand("Update MusteriTbl set CarbonDegeri=@d2 where SHA256=@d1", bgl.baglanti());
+                    SqlCommand komut4 = new SqlCommand("Update MusteriTbl set CoinDegeri=@d2 where SHA256=@d1", bgl.baglanti());
                     komut4.Parameters.AddWithValue("@d1", lblgondericiadres.Text);
                     komut4.Parameters.AddWithValue("@d2", Convert.ToDecimal(lblgndrcyeni.Text));
                     komut4.ExecuteNonQuery();
                     bgl.baglanti().Close();
-                    MessageBox.Show("Doktor Guncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Coin Degerleri Guncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
                 {
-                    MessageBox.Show("Kendinize Carbon gönderemezsiniz!!");
+                    MessageBox.Show("Kendinize Coin gönderemezsiniz!!");
                 }
             }
             else

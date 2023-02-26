@@ -145,9 +145,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 28);
+            this.label3.Size = new System.Drawing.Size(140, 28);
             this.label3.TabIndex = 53;
-            this.label3.Text = "Carbon Değerin:";
+            this.label3.Text = "Coin Değerin:";
             // 
             // lblTC
             // 

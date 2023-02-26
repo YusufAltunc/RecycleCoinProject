@@ -64,7 +64,6 @@
             this.txtsifre.Name = "txtsifre";
             this.txtsifre.Size = new System.Drawing.Size(179, 36);
             this.txtsifre.TabIndex = 10;
-            this.txtsifre.UseSystemPasswordChar = true;
             // 
             // msktc
             // 
@@ -117,7 +116,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 13.8F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmMusteriGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Musteri Giris";
